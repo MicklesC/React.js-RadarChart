@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css/textinput_style.css";
+import "../../css/form_style_select.css";
 
 export class Select extends React.Component {
   constructor(props) {

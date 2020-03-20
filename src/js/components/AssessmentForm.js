@@ -1,6 +1,7 @@
 import React from "react";
 import { Input } from "./Input";
 import { Select } from "./Select";
+import "../../css/form_style.css";
 
 export class AssessmentForm extends React.Component {
   render() {
