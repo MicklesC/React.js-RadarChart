@@ -1,11 +1,10 @@
 import React from "react";
+import { RadarData, RadarOptions } from "../configs/RadarConfig";
 import { Radar } from "react-chartjs-2";
-import { RadarData, RadarOptions } from "./ChartConfig";
 
 export class RadarChart extends React.Component {
   constructor(props) {
     super(props);
-
     this.chartRef = React.createRef();
   }
 
