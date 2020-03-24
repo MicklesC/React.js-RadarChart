@@ -1,12 +1,14 @@
 import React from "react";
-// import { RadarChart } from "./components/RadarChart";
 import { AssessmentForm } from "./components/AssessmentForm";
+
+// import { NavBar } from "./components/NavBar";
+// import { Checkbox } from "./components/Checkbox";
+
 import "../css/styles.css";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Form</h1>
       <AssessmentForm />
     </div>
   );

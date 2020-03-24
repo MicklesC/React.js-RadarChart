@@ -1,58 +1,92 @@
 import React from "react";
-import { Input } from "./Input";
-import { Select } from "./Select";
-import "../../css/form_style.css";
+import { Transition, TransitionGroup } from "react-transition-group";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+// import "../../css/form_style.css";
 
 export class AssessmentForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      maxPullups: 0,
+      maxPushups: 0,
+      maxDips: 0,
+      maxHang: 0
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(e) {
+    const target = e.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  handleSubmit(e) {
+    alert("Input was " + this.state.value);
+    escape.preventDefault();
+  }
+
   render() {
-    const optionsArray = [
-      "Option 1",
-      "Option 2",
-      "Option 3",
-      "Option 4",
-      "Option 5"
-    ];
     return (
-      <form>
-        <Input
-          id="1"
-          label="Criteria 1"
-          placeholder="criteria one"
-          type="number"
-        />
-        <Input
-          id="2"
-          label="Criteria 2"
-          placeholder="Criteria Two"
-          type="text"
-        />
-        <Select
-          defaultValue="Option 1"
-          label="Select Label"
-          optionItems={optionsArray}
-        />
-      </form>
+      <React.Fragment>
+        <form>
+          <label>
+            <input
+              className="formfield form_input"
+              id={1}
+              placeholder="Max Pullups"
+              type="number"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            <input
+              className="formfield form_input"
+              id={2}
+              placeholder="Max Pushups"
+              type="number"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            <input
+              className="formfield form_input"
+              id={3}
+              placeholder="Max Dips"
+              type="number"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label>
+            <input
+              className="formfield form_input"
+              id={4}
+              placeholder="Max Hangs"
+              type="number"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+          </label>
+        </form>
+        <div>
+          <button className="Submit" onClick={this.handleSubmit}>
+            Submit
+          </button>
+        </div>
+      </React.Fragment>
     );
   }
 }
 
-// export const AssessmentForm = props => {
-//   render () {
-//   return (
-//     <Input
-//       id="1"
-//       active={true}
-//       label="Criteria One"
-//       placeholder="Criteria 1"
-//       type="number"
-//     />
-//   );
-// }
-// };
-
-// active: props.active || false,
-// value: props.value || "",
-// label: props.label || "",
-// pleaceholder: props.placeholder || "",
-// type: props.type || "",
-// id: props.id || ""
+/*{ <Select
+          defaultValue="Option 1"
+          label="Select Label"
+          optionItems={optionsArray}
+        /> } */

@@ -20,11 +20,6 @@ export class Input extends React.Component {
       value: e.target.value
     });
   }
-  // Not sure if I need this
-  // handleSubmit(e) {
-  //   alert("This info was submitted: " + this.state.value);
-  //   e.preventDefault();
-  // }
   render() {
     return (
       <label>

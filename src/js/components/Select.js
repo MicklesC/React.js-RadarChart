@@ -1,5 +1,4 @@
 import React from "react";
-import "../../css/form_style_select.css";
 
 export class Select extends React.Component {
   constructor(props) {
@@ -30,7 +29,7 @@ export class Select extends React.Component {
 
     return (
       <label>
-        {this.state.label}
+        <p className="fieldLabel">{this.state.label}</p>
         <select
           value={this.state.value}
           onChange={this.handleChange}

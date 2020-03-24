@@ -1,5 +1,5 @@
 .formfield {
-  width: 100%;
+  width: 30%;
   height: 50px;
   border-radius: 4px;
   position: relative;
@@ -12,4 +12,9 @@
 }
 .formfield-active {
   background-color: red;
+}
+.fieldLabel {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 50px;
 }
