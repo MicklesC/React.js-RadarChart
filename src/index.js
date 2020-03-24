@@ -1,12 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-
-import App from "./js/App";
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  rootElement
-);
+import { render } from "react-dom";
+import App from "./App";
+// import NavBar from "./js/components/navbar/NavBar";
+render(<App />, document.getElementById("root"));
