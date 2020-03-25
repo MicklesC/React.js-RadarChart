@@ -1,10 +1,10 @@
 import React from "react";
 // import { withStyles } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HomePage from "./js/pages/HomePage";
-import AssessmentTest from "./js/pages/AssessmentTest";
-import ContactPage from "./js/pages/ContactPage";
-import LoginPage from "./js/pages/LoginPage";
+import HomePage from "./pages/HomePage";
+import AssessmentTest from "./pages/AssessmentTest";
+import ContactPage from "./pages/ContactPage";
+import LoginPage from "./pages/LoginPage";
 import { createBrowserHistory } from "history";
 
 const history = createBrowserHistory();
