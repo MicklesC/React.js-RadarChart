@@ -1,28 +1,18 @@
 import React from "react";
-import { Container } from "@material-ui/core";
-import { PlanButton } from "../components/HomepagePlans";
-
 import { Link } from "react-router-dom";
 
-export default function HomePage() {
-  return (
-    <React.Fragment>
-      <Container maxWidth="md">
-        <div className="header-banner">Banner Holding Spot</div>
-
-        <section className="methodology">
-          Include Radar Chart .GIF and explaination. Include PDF download for
-          assessment test.
-        </section>
-
-        <section className="plans">
-          <PlanButton key="1" title="Title" />
-        </section>
-
-        <section className="about">Dave's bio</section>
-
-        <section className="testimonials" />
-      </Container>
-    </React.Fragment>
-  );
+export default class HomePage extends React.Component {
+  render() {
+    return (
+      <React.Fragment>
+        <h1> HomePage </h1>
+        <h3>Banner</h3>
+        <h3>Method</h3>
+        <h3>Plans for sale</h3>
+        <h3>About Dave</h3>
+        <h3>Testimonials</h3>
+        <h3>Contact</h3>
+      </React.Fragment>
+    );
+  }
 }
